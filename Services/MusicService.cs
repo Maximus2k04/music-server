@@ -1,4 +1,5 @@
-using TagLib;
+using TagFile = TagLib.File;
+using MusicServer.Models;
 
 namespace MusicServer.Services;
 
@@ -77,7 +78,7 @@ public class MusicService
 
     private Song ExtractSongMetadata(string filePath)
     {
-        var file = File.Create(filePath);
+        var file = TagFile.Create(filePath);
         var tag = file.Tag;
         var properties = file.Properties;
 

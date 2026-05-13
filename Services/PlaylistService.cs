@@ -1,3 +1,5 @@
+using MusicServer.Models;
+
 namespace MusicServer.Services;
 
 public class PlaylistService
